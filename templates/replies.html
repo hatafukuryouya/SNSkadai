@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>リプライ</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/styles.css" rel="stylesheet">
+    <link rel="icon" href="/static/favicon/SNS.ico">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">リプライ</h1>
+        {% for reply in replies %}
+        <div class="card mt-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ reply.username }}</h5>
+                <p class="card-text">{{ reply.content }}</p>
+            </div>
+        </div>
+        {% endfor %}
+        <a href="{{ url_for('dashboard') }}" class="btn btn-primary mt-3">ホームに戻る</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

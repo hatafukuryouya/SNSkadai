@@ -1,0 +1,19 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.reply-form, .like-form {
+    display: inline-block;
+}
+
+.reply-form {
+    margin-right: 10px;
+}
